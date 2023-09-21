@@ -17,7 +17,10 @@ class PlantsListCreateAPIView(ListCreateAPIView):
 class PlantsRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     serializer_class = PlantSerializers
     queryset = plants.objects.all()
-    permission_classes = [AdminPermission]
+    # permission_classes = [AdminPermission]
+
+    # def perform_create(self, serializer):
+    #     serializer.save(supplier=self.request.user)    
 
 class OrderListCreateAPIView(ListCreateAPIView):
     serializer_class = OrderSerializers

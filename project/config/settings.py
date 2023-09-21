@@ -107,7 +107,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'plantshoppe',
         'USER': 'root',
-        'PASSWORD': '@admin21',
+        'PASSWORD': '@Admin15',
         'HOST':'localhost',
         'PORT':'3306',
     }
