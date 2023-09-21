@@ -9,13 +9,11 @@ from accounts.permissions import ClientPermission, AdminPermission
 class PlantsListCreateAPIView(ListCreateAPIView):
     serializer_class = PlantSerializers
     queryset = plants.objects.all()
-    permission_classes = [AdminPermission]
+    # permission_classes = [AdminPermission]
 
     def perform_create(self, serializer):
-        # Set the user as the authenticated user when creating a driver instance
-        serializer.save(user=self.request.user)
-    
-
+        serializer.save(supplier=self.request.user)
+        
 class PlantsRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     serializer_class = PlantSerializers
     queryset = plants.objects.all()

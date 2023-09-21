@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'accounts',
     "corsheaders",    
     "stocks"
-    
 ]
 
 REST_FRAMEWORK = {
@@ -108,7 +107,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'plantshoppe',
         'USER': 'root',
-        'PASSWORD': '@Admin15',
+        'PASSWORD': '@admin21',
         'HOST':'localhost',
         'PORT':'3306',
     }
